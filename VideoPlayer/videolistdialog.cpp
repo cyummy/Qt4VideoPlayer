@@ -40,19 +40,19 @@ void VideoListDialog::showData(QString str)
         pathC = "../resource/sqdwznl";
     }
 
-    QImage image;
-    image.load(pathA + ".jpg");
-    ui->LB_picA->setPixmap(QPixmap::fromImage(image));
-    ui->LB_picA->resize(QSize(image.width(), image.height()));
-    image.load(pathB + ".jpg");
-    ui->LB_picB->setPixmap(QPixmap::fromImage(image));
-    ui->LB_picB->resize(QSize(image.width(), image.height()));
-    image.load(pathC + ".jpg");
-    ui->LB_picC->setPixmap(QPixmap::fromImage(image));
-    ui->LB_picC->resize(QSize(image.width(), image.height()));
+    QPixmap iconA(pathA + ".jpg");
+    QPixmap iconB(pathB + ".jpg");
+    QPixmap iconC(pathC + ".jpg");
+
+    ui->BT_picA->setIcon(iconA);
+    ui->BT_picA->setIconSize(iconA.size());
+    ui->BT_picB->setIcon(iconB);
+    ui->BT_picB->setIconSize(iconB.size());
+    ui->BT_picC->setIcon(iconC);
+    ui->BT_picC->setIconSize(iconC.size());
 }
 
-void VideoListDialog::on_LB_picA_clicked()
+void VideoListDialog::on_BT_picA_clicked()
 {
     emit sendPath(pathA + ".wmv");
     this->hide();
@@ -61,7 +61,7 @@ void VideoListDialog::on_LB_picA_clicked()
     this->show();
 }
 
-void VideoListDialog::on_LB_picB_clicked()
+void VideoListDialog::on_BT_picB_clicked()
 {
     emit sendPath(pathB + ".wmv");
     this->hide();
@@ -70,7 +70,7 @@ void VideoListDialog::on_LB_picB_clicked()
     this->show();
 }
 
-void VideoListDialog::on_LB_picC_clicked()
+void VideoListDialog::on_BT_picC_clicked()
 {
     emit sendPath(pathC + ".wmv");
     this->hide();

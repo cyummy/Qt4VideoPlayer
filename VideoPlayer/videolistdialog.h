@@ -24,9 +24,11 @@ private slots:
 
     void showData(QString);
 
-    void on_LB_picA_clicked();
-    void on_LB_picB_clicked();
-    void on_LB_picC_clicked();
+    void on_BT_picA_clicked();
+
+    void on_BT_picB_clicked();
+
+    void on_BT_picC_clicked();
 
 private:
     Ui::VideoListDialog *ui;

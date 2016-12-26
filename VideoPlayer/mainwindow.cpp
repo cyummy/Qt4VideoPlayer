@@ -12,17 +12,16 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->BT_new->installEventFilter(this);
     ui->BT_domestic->installEventFilter(this);
     ui->BT_western->installEventFilter(this);
-    ui->LB_picA->installEventFilter(this);
-    ui->LB_picB->installEventFilter(this);
+    ui->BT_picA->installEventFilter(this);
+    ui->BT_picB->installEventFilter(this);
 
-    QImage imageA, imageB;
-    imageA.load("../resource/mghxd.jpg");
-    imageB.load("../resource/sqdwznl.jpg");
+    QPixmap iconA("../resource/mghxd.jpg");
+    QPixmap iconB("../resource/sqdwznl.jpg");
 
-    ui->LB_picA->setPixmap(QPixmap::fromImage(imageA));
-    ui->LB_picA->resize(QSize(imageA.width(), imageA.height()));
-    ui->LB_picB->setPixmap(QPixmap::fromImage(imageB));
-    ui->LB_picB->resize(QSize(imageB.width(), imageB.height()));
+    ui->BT_picA->setIcon(iconA);
+    ui->BT_picA->setIconSize(iconA.size());
+    ui->BT_picB->setIcon(iconB);
+    ui->BT_picB->setIconSize(iconB.size());
 
     videoListDlg = new VideoListDialog(this);
     connect(this, SIGNAL(sendData(QString)), videoListDlg, SLOT(showData(QString)));
@@ -63,7 +62,7 @@ void MainWindow::on_BT_western_clicked()
     this->show();
 }
 
-void MainWindow::on_LB_picA_clicked()
+void MainWindow::on_BT_picA_clicked()
 {
     emit sendPath("../resource/mghxd.wmv");
     this->hide();
@@ -72,7 +71,7 @@ void MainWindow::on_LB_picA_clicked()
     this->show();
 }
 
-void MainWindow::on_LB_picB_clicked()
+void MainWindow::on_BT_picB_clicked()
 {
     emit sendPath("../resource/sqdwznl.wmv");
     this->hide();

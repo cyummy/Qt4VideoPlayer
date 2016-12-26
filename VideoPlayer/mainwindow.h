@@ -28,9 +28,9 @@ private slots:
 
     void on_BT_western_clicked();
 
-    void on_LB_picA_clicked();
+    void on_BT_picA_clicked();
 
-    void on_LB_picB_clicked();
+    void on_BT_picB_clicked();
 
 private:
     Ui::MainWindow *ui;

@@ -18,7 +18,6 @@ SOURCES += main.cpp\
     logindialog.cpp \
     videolistdialog.cpp \
     videoplayerdialog.cpp \
-    qtclickablelabel.cpp \
     myinputpanel.cpp \
     myinputpanelcontext.cpp
 
@@ -26,7 +25,6 @@ HEADERS  += mainwindow.h \
     logindialog.h \
     videolistdialog.h \
     videoplayerdialog.h \
-    qtclickablelabel.h \
     myinputpanel.h \
     myinputpanelcontext.h
 

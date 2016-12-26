@@ -14,7 +14,7 @@
    <enum>Qt::NoContextMenu</enum>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>播放器</string>
   </property>
   <widget class="Phonon::VideoPlayer" name="videoPlayer">
    <property name="geometry">
@@ -32,7 +32,7 @@
     </sizepolicy>
    </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>11</x>
